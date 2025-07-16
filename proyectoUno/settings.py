@@ -27,7 +27,9 @@ SECRET_KEY = '^wfd@g&ux1c90)a095ba1evi$7dez*^klty@5ze(wdsh-%84!@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"]
+
 
 
 # Application definition
@@ -168,3 +170,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication', # Mantener para el navegador y el panel admin
     ],
 }
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
