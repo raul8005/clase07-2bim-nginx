@@ -14,6 +14,11 @@ router.register(r'groups', views.GroupViewSet)
 router.register(r'estudiantes', views.EstudianteViewSet)
 router.register(r'numerosts', views.NumeroTelefonicoViewSet)
 
+# importar
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
+# agregar el siguiente valor a la variable urlpatterns
+urlpatterns += staticfiles_urlpatterns()
 
 urlpatterns = [
         path('', views.index, name='index'),
